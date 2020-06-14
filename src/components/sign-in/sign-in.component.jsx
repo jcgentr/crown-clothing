@@ -56,7 +56,11 @@ const SignIn = () => {
             {" "}
             Sign In{" "}
           </CustomButton>
-          <CustomButton isGoogleSignIn={true} onClick={signInWithGoogle}>
+          <CustomButton
+            type='button'
+            isGoogleSignIn={true}
+            onClick={signInWithGoogle}
+          >
             {" "}
             Sign In with Google{" "}
           </CustomButton>
