@@ -30,8 +30,6 @@ const App = () => {
     return () => unsubscribe();
   }, []);
 
-  useEffect(() => console.log("current user: ", currentUser), [currentUser]);
-
   return (
     <div>
       <Header currentUser={currentUser} />
