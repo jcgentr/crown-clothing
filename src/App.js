@@ -8,6 +8,8 @@ import "./App.css";
 import HomePage from "./pages/homepage/homepage.component";
 import ShopPage from "./pages/shop/shop.component";
 import SignInSignUpPage from "./pages/sign-in-sign-up/sign-in-sign-up.component";
+import CheckoutPage from "./pages/checkout/checkout.component";
+
 import Header from "./components/header/header.component";
 import { selectCurrentUser } from "./redux/user/user.selectors";
 
@@ -30,6 +32,7 @@ const App = ({ currentUser, setCurrentUser }) => {
     });
     // unsubscribe to the listener when unmounting
     return () => unsubscribe();
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -38,6 +41,7 @@ const App = ({ currentUser, setCurrentUser }) => {
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route path='/shop' component={ShopPage} />
+        <Route exact path='/checkout' component={CheckoutPage} />
         <Route
           path='/signin'
           render={() =>
